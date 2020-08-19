@@ -18,14 +18,12 @@ class Login(LoginView):
 class Home(LoginRequiredMixin, ExeptionHunter):
     """ Class ExeptionHunter is extended by View """
     def get(self, request):
-        logger.info(str(request.user) +' was logged')
-        messages.success(request, str(request.user)+' was logged', extra_tags="alert-success") 
         return render(request, 'accounts/home.html', context={})
 
 class Profile(LoginRequiredMixin, ExeptionHunter):
     def get(self, request, pk):
-        logger.info(str(request.user) +' was logged')
-        messages.success(request, str(request.user)+' was logged', extra_tags="alert-success") 
+        logger.info('Walcome, '+str(request.user))
+        messages.success(request,'Walcome, '+str(request.user), extra_tags="alert-success") 
         user = get_object_or_404(User, pk=pk)
         return render(request, 'accounts/profile.html', context={'user':user})
 
