@@ -1,0 +1,49 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% block stylesheet %}       
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="{% static 'css/custom/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/custom/card_photo.css' %}">
+
+    {% endblock stylesheet %}  
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+  </head>
+  <body>
+
+    <div class="container-fluid">
+       
+        <!-- MESSAGES -->
+        {% include "include/messages.html" %}
+        <!--END  MESSAGES -->
+
+        <!-- NAVBAR -->
+        {% block navbar %}
+            {% include "include/navbar.html" %}   
+        {% endblock navbar %}
+        <!-- END NAVBAR -->
+        
+        <!-- CONTENT -->
+        {% block content %}
+        {% static 'css/bootstrap/bootstrap.min.css' %}
+        {% endblock content %}
+        <!--END  CONTENT -->
+
+    </div> 
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    {% block scripts %}  
+    <script src="{% static 'js/jquery.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/bootstrap/bootstrap.min.js' %}" type="text/javascript"></script>
+    {% endblock scripts %}
+  </body>
+</html>

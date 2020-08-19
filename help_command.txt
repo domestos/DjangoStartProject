@@ -1,0 +1,2 @@
+Create a Model Diagrame of databese 
+ .\manage.py graph_models -a -o assegai.png

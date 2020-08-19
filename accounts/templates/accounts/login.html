@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+<!-- NAVBAR -->
+{% block navbar %}
+{% endblock navbar %}
+<!--END  NAVBAR -->
+
+<!-- CONTENT -->
+{% block content %}
+    <style>
+    .form-signin {
+            width: 100%;
+            max-width: 420px;
+            padding: 15px;
+            margin: auto;
+        }
+    </style>
+
+    <div class="form-signin">
+        <div class="text-center mb-4"><br><br><br><br>
+            <h1 class="h3 mb-3 font-weight-normal">Login Form</h1>
+        </div>    
+        <form action="" method="POST" class=" form-group ">
+            {% csrf_token %}
+            {{form|crispy}}
+            <button class="btn btn-lg btn-outline-info btn-block" type="submit">Sign in</button>
+        </form>
+    </div>
+{% endblock content %}
+<!--END  CONTENT -->

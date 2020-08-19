@@ -1,0 +1,24 @@
+
+  <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+    <h5 class="my-0 mr-md-auto font-weight-normal">NAVBAR</h5>
+    
+    <nav class="navbar my-2 my-md-0 mr-md-3">
+      <a class="p-2 text-dark" href="{% url 'home_url' %}">Home</a>
+      <a class="p-2 text-dark" href="{% url 'profile_url' request.user.id %}">Profile</a>
+    </nav>
+    <a class="btn btn-outline-info" href="{% url 'logout_url' %}">Logout</a>
+
+    <!-- <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand">Navbar</a>
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </nav> -->
+  </div>
+
+
+
+
+
+  
